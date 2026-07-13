@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trade Analyzer</title>
+  <style>
+    body {
+      width: 250px;
+      padding: 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1e1e24;
+      color: white;
+      margin: 0;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 16px;
+      color: #00c6ff;
+      border-bottom: 1px solid #333;
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 13px;
+      color: #ccc;
+    }
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #2a2a35;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 12px;
+    }
+    .active-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #00e676;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Trade Analyzer</h2>
+  <p>Extension is active and monitoring broker pages.</p>
+  <p>Open <b>Groww</b> or <b>Fyers</b> stock pages to see the analyzer widget.</p>
+  
+  <div class="status">
+    <span class="active-dot"></span> Service Worker Running
+  </div>
+  <script src="dist/popup.js"></script>
+</body>
+</html>

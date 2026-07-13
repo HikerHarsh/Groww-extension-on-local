@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Trade Analyzer & Visualizer",
+  "version": "1.0",
+  "description": "Visualizes holdings and suggests entry, SL, and targets for Groww and Fyers.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.groww.in/*",
+    "*://*.fyers.in/*",
+    "*://query1.finance.yahoo.com/*",
+    "*://query2.finance.yahoo.com/*",
+    "*://www.investorgain.com/*",
+    "*://*.ipowatch.in/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.groww.in/*",
+        "*://*.fyers.in/*"
+      ],
+      "css": ["styles.css"],
+      "js": ["dist/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Trade Analyzer"
+  }
+}
